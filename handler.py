@@ -103,7 +103,7 @@ def send_alert(event_details, affected_accounts, affected_entities, event_type):
         except URLError as e:
             print("Server connection failed: ", e.reason)
             pass
-    if "hooks.slack.com/workflows" in slack_url:
+    if "hooks.slack.com/triggers" in slack_url:
         try:
             print("Sending the alert to Slack Workflows Channel")
             send_to_slack(
@@ -208,7 +208,7 @@ def send_org_alert(
         except URLError as e:
             print("Server connection failed: ", e.reason)
             pass
-    if "hooks.slack.com/workflows" in slack_url:
+    if "hooks.slack.com/triggers" in slack_url:
         try:
             print("Sending the alert to Slack Workflow Channel")
             send_to_slack(
